@@ -1,6 +1,6 @@
 📝 **README - Estatísticas do Brasileirão Série A de 2003 a 2019**
 
-Este código em Python permite analisar os dados dos times que participaram do campeonato nos anos de 2003 a 2019, fornecendo estatísticas como gols pró e contra, saldo de gols, gols marcados como mandante e visitante, total de gols, além da quantidade de vitórias e derrotas de cada equipe.
+Este código em Python permite analisar os dados dos times que participaram do campeonato nos anos de 2003 a 2019, fornecendo estatísticas como gols pró e contra, saldo de gols, gols marcados como mandante e visitante, total de gols, além da quantidade de vitórias, empates e derrotas de cada equipe.
 
 Este projeto foi desenvolvido como Projeto Final da disciplina Lógica de Programação II do curso de Python e Ciência de Dados <BeTech> by Braskem em parceria com a Ada Tech com o objetivo de aplicar os conhecimentos ensinados durante a disciplina e mostrar a utilização das bibliotecas e técnicas aprendidas. Portanto, o foco principal está na implementação das funcionalidades propostas e não na análise completa de todo o conjunto de dados.
 
@@ -38,12 +38,21 @@ O código lê os dados dos times a partir de um arquivo CSV chamado `campeonato-
 
 Este arquivo é uma fração de um conjunto de dados maior disponível no Kaggle, nesse [link](https://www.kaggle.com/datasets/adaoduque/campeonato-brasileiro-de-futebol). Devido ao calendário de jogos depois pandemia, que difere do padrão, e considerando o escopo deste projeto, optei por utilizar apenas uma parte dos dados disponíveis, a fim de facilitar o tratamento e o foco no aprendizado dos conceitos ensinados durante o curso. Caso deseje explorar o conjunto de dados completo, você pode baixá-lo do Kaggle e adaptar o código para tratar o conjunto completo.
 
-## ❗ Tratamento de exceções
+## :mag_right: Sobre o critério de avaliação
 
-O código implementa tratamento de exceções para lidar com possíveis erros durante a execução. Caso ocorra algum problema na leitura do arquivo ou durante o processamento dos dados, você receberá uma mensagem de erro apropriada no terminal.
+Neste projeto final, foram utilizados os seguintes critérios de avaliação:
+
+- **Dicionários e Tuplas**: O projeto faz amplo uso de dicionários e tuplas nas funções `obter_estatisticas` e `imprimir_estatisticas` sendo o uso do dicionários voltado para acessar o arquivo por meio da função `DictReader` da biblioteca CSV. Já a tupla foi utilizada para retorno entre as funções citadas anteriormente.
+
+- **Funções**: O projeto envolve a criação e uso de várias funções que foram criadas principalmente para organização, pois o código não exige reuso. Apenas uma função foi criada visando o reuso de código, a função `volta_para_inicio_arquivo` cuja função é retornar o ponteiro do arquivo para o início após cada leitura.  
+
+- **Manipulação de arquivos**: O código realiza a leitura de dados do arquivo CSV `campeonato-brasileiro-full.csv` para acessar as informações sobre os times e partidas do campeonato brasileiro. Esses dados são lidos enquanto dicionários por meio da função `DictReader` da biblioteca CSV. A partir da leitura enquanto dicionário, fica mais fácil obter as estatísticas e cálculos necessários.
+
+- **Tratamento de exceções**: Foi utilizado o tratamento de exceções nas funções `imprimir_estatisticas`, `obter_time` e `obter_ano` para evitar que houvesse erro por divisão por zero no cálculo de médias de gols e para que as entradas de time e ano fossem, respectivamente, alphanuméricos sem acentose dígitos. Ainda há mais um tratamento de exceção por tecla de interrupção do usuário.
+
+Não foram utilizados os conceitos de lambda, map, reduce e filter devido à natureza e complexidade das operações realizadas. O escopo do projeto exigiu um processamento mais abrangente e estruturado dos dados, tornando outras abordagens mais adequadas para lidar com as manipulações necessárias.
 
 ## 🏁 Conclusão
 
 O objetivo desse repositório é destacar o trabalho que realizei, mostrar as técnicas e conceitos que aprendi e servir como referência para mim e para outras pessoas interessadas em Python e Ciência de Dados. Fique à vontade para explorar o repositório, verificar os códigos e arquivos disponíveis e me contatar, se surgirem dúvidas. 
 
-:computer: :chart_with_upwards_trend: :snake: ⚽️📊📈📉
